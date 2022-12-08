@@ -1,0 +1,12 @@
+F:\marketplace\Api\Marketplace.Core\bin\Debug\net5.0\Marketplace.Core.deps.json
+F:\marketplace\Api\Marketplace.Core\bin\Debug\net5.0\Marketplace.Core.dll
+F:\marketplace\Api\Marketplace.Core\bin\Debug\net5.0\Marketplace.Core.pdb
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\Marketplace.Core.csproj.AssemblyReference.cache
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\Marketplace.Core.GeneratedMSBuildEditorConfig.editorconfig
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\Marketplace.Core.AssemblyInfoInputs.cache
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\Marketplace.Core.AssemblyInfo.cs
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\Marketplace.Core.csproj.CoreCompileInputs.cache
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\Marketplace.Core.dll
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\refint\Marketplace.Core.dll
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\Marketplace.Core.pdb
+F:\marketplace\Api\Marketplace.Core\obj\Debug\net5.0\ref\Marketplace.Core.dll
