@@ -1,0 +1,30 @@
+<div class="container-fluid bcontent">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let offer of listOffers | paginate : pagingConfig; let i = index">
+        <div class="card">
+            <div class="card-header" style="background-color: black; color: white;">
+                <h5 class="card-title">{{offer.title}}</h5>
+              </div>
+          <img class="card-img-top" src="assets/{{offer.pictureUrl}}" alt="Card image cap">
+          <div class="card-block">
+            <h4 class="card-title">JCUrquijo {{offer.publishedOn | date: 'short'}}</h4>
+            <p class="card-text">{{offer.description}}</p>
+            <a href="#" class="btn btn-primary">{{offer?.category.name}}</a>
+        </div>
+        </div>
+    </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <pagination-controls
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="onTableDataChange($event)">
+        </pagination-controls>
+      </div>
+</div>
+
+
+
+
+  
+

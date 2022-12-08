@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+    <div class="container-fluid bcontent" class="col-md-4">
+        <div class="card" >
+            <h4 class="card-header">Post New</h4>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" formControlName="title" class="form-control" placeholder="Title"
+                        [ngClass]="{'invalid-data': title?.invalid && (title?.touched || title?.dirty)}" />
+                        <div *ngIf="title?.invalid  && (title?.dirty || title?.touched)">
+                            <div class="invalid-mensaje" *ngIf="form.get('title')?.hasError('required')">
+                                Title Required
+                              </div>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pictureurl">Picture Url</label>
+                        <input type="text" formControlName="pictureurl" class="form-control" placeholder="Offers/iphone.jpg"
+                        [ngClass]="{'invalid-data': pictureurl?.invalid && (pictureurl?.touched || pictureurl?.dirty)}" />
+                        <div *ngIf="pictureurl?.invalid  && (pictureurl?.dirty || pictureurl?.touched)">
+                            <div class="invalid-mensaje" *ngIf="form.get('pictureurl')?.hasError('required')">
+                                Picture Url Required
+                              </div>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea formControlName="description"
+                            [ngClass]="{'invalid-data': description?.invalid && (description?.touched || description?.dirty)}"
+                            type="text" class="form-control" placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <input type="text" formControlName="location" class="form-control" placeholder="Country, city, neighborhood, the office, my desk, etc."
+                        [ngClass]="{'invalid-data': location?.invalid && (location?.touched || location?.dirty)}" />
+                        <div *ngIf="location?.invalid  && (location?.dirty || location?.touched)">
+                            <div class="invalid-mensaje" *ngIf="form.get('location')?.hasError('required')">
+                                Location Required
+                              </div>
+                              
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Category</label>
+                        <select class="form-control" formControlName="categoryid">
+                          <option [value]="null">--Seleccione--</option>
+                          <option value="{{category.id}}" *ngFor="let category of listCategory">
+                            {{category.name}}</option>
+                        </select>
+                    </div>
+                    <div *ngIf="categoryid?.invalid  && (categoryid?.dirty || categoryid?.touched)">
+                        <div class="invalid-mensaje" *ngIf="form.get('categoryid')?.hasError('required')">
+                            Category Required
+                          </div>
+                      </div>
+                    <div class="form-group">
+                        <button [disabled]="loading" class="btn btn-primary">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Register
+                        </button>
+                        <a routerLink="../login" class="btn btn-link">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

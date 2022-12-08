@@ -1,0 +1,63 @@
+<div class="row justify-content-center">
+    <div class="container-fluid bcontent" class="col-md-4">
+        <div class="card" >
+            <h4 class="card-header">Register</h4>
+            <div class="card-body">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" formControlName="firstname" class="form-control" 
+                        [ngClass]="{'invalid-data': firstname?.invalid && (firstname?.touched || firstname?.dirty)}" />
+                        <div *ngIf="firstname?.invalid  && (firstname?.dirty || firstname?.touched)">
+                            <div class="invalid-mensaje" *ngIf="form.get('firstname')?.hasError('required')">
+                                First Name Required
+                              </div>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" formControlName="lastname" class="form-control" 
+                        [ngClass]="{'invalid-data': lastname?.invalid && (lastname?.touched || lastname?.dirty)}" />
+                        <div *ngIf="lastname?.invalid  && (lastname?.dirty || lastname?.touched)">
+                            <div class="invalid-mensaje" *ngIf="form.get('lastname')?.hasError('required')">
+                                Last Name Required
+                              </div>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" formControlName="username" class="form-control" 
+                        [ngClass]="{'invalid-data': username?.invalid && (username?.touched || username?.dirty)}" />
+                        <div *ngIf="username?.invalid  && (username?.dirty || username?.touched)">
+                            <div class="invalid-mensaje" *ngIf="form.get('username')?.hasError('required')">
+                                UserName Required
+                              </div>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" formControlName="password" class="form-control" 
+                        [ngClass]="{'invalid-data': password?.invalid && (password?.touched || password?.dirty)}" />
+                        <div *ngIf="password?.invalid  && (password?.dirty || password?.touched)">
+                            <div class="invalid-mensaje" *ngIf="form.get('password')?.hasError('required')">
+                                Password Required
+                              </div>
+                              <div class="invalid-mensaje" *ngIf="form.get('password')?.hasError('minlength')">
+                                Password must be at least 6 characters
+                              </div>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <button [disabled]="loading" class="btn btn-primary">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Register
+                        </button>
+                        <a routerLink="../login" class="btn btn-link">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
